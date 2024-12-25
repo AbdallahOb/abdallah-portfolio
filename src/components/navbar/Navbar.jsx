@@ -1,12 +1,15 @@
 import React from "react";
 import "./navbar.scss";
+import {motion} from 'framer-motion'
+import Sidebar from "../sidebar/Sidebar";
 
 const Navbar = () => {
     return (
         <div className="navbar">
-            /* Sidebar */
+            <Sidebar />
+
             <div className="wrapper">
-                <span>Abdallah Obeidat</span>
+                <motion.span intial={{opacity:0, scale:0.5}} animate={{opacity:1, scale:1}} transition={{duration:0.5}}>Abdallah Obeidat</motion.span>
                 <div className="social">
                 <a href="#"><img src="/facebook.png" alt="facebook"/></a>
                 <a href="#"><img src="/instagram.png" alt="instagram"/></a>
