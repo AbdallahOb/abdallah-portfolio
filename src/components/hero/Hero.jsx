@@ -45,7 +45,7 @@ const Hero = () => {
     <div className='hero'>
         <div className="wrapper">
         <motion.div className="textContainer" variants = {textVariants} initial="initial" animate="animate">
-            <motion.h2 initial="initial" animate="animate" variants = {textVariants}>Abdallah Obeidat</motion.h2>
+            <motion.h2 initial="initial" animate="animate" variants = {textVariants}>ABDALLAH OBEIDAT</motion.h2>
             <motion.h1 initial="initial" animate="animate" variants = {textVariants}>Software Engineer and Quality Engineer</motion.h1>
             <motion.div initial="initial" animate="animate" variants = {textVariants} className="buttons">
                 <motion.button initial="initial" animate="animate" variants = {textVariants}>See the Latest Works</motion.button>
@@ -58,9 +58,9 @@ const Hero = () => {
              Java Spring-boot Node JS React MySQL PostgreSQL   
         </motion.div>
 
-        {/* <div className="imageContainer">
+        <div className="imageContainer">
             <img src='/hero.png' alt='hero' />
-        </div> */}
+        </div>
         </div>
         
     </div>
