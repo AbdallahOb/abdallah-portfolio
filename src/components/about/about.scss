@@ -1,0 +1,156 @@
+@import "../../app.scss";
+
+
+
+.about {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  //   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4%;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    gap: 50px;
+
+    @include mobile {
+      gap: 20px;
+      justify-content: center;
+      //   flex-direction: row;
+    }
+
+    p {
+      font-size: 30px;
+      line-height: 50px;
+
+      @include tablet {
+        font-size: 22px;
+        line-height: 50px;
+      }
+      @include mobile {
+        font-size: 10px;
+        line-height: 30px;
+      }
+
+      a {
+        font-size: 50px;
+
+        &:hover {
+          color: lightskyblue;
+        }
+        @include tablet {
+          font-size: 42px;
+        }
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+    }
+
+    span {
+      font-size: 25px;
+      @include tablet {
+        font-size: 36px;
+      }
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+
+    h1 {
+      writing-mode: vertical-lr;
+      //   text-orientation: sideways-right;
+      font-size: 150px;
+      letter-spacing: 20px;
+
+      &:hover {
+        color: orange;
+      }
+
+      @include mobile {
+        font-size: 44px;
+        letter-spacing: 15px;
+      }
+    }
+
+    ul {
+      width: 350px;
+      text-align: center;
+
+      @include mobile {
+        max-width: 300px;
+      }
+
+      //   span:after,
+      //   span:before {
+      //     content: "\00a0\00a0\00a0\00a0\00a0\00a0";
+      //     text-decoration: line-through;
+      //   }
+
+      span {
+        // font-size: 40px;
+        font-size: 2.5rem;
+        text-align: center;
+        display: flex;
+        color: orange;
+
+        @include tablet {
+          font-size: 38px;
+        }
+        @include mobile {
+          font-size: 24px;
+        }
+      }
+
+      span:after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid gray;
+        margin: auto;
+        margin-left: 10px;
+      }
+
+      li {
+        list-style-type: none;
+        // font-size: 32px;
+        font-size: 2rem;
+        line-height: 55px;
+        text-align: right;
+        // display: flex;
+        // width: 500px;
+
+        @include tablet {
+          font-size: 28px;
+          line-height: 45px;
+          text-align: center;
+        }
+        @include mobile {
+          font-size: 20px;
+          line-height: 31px;
+          text-align: center;
+        }
+
+        &:hover {
+          scale: 1.05;
+        }
+      }
+    }
+  }
+}

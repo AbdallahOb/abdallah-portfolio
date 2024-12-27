@@ -1,0 +1,249 @@
+@import "../../app.scss";
+
+.portfolio {
+  position: relative;
+
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 30px;
+    text-align: center;
+    color: orange;
+
+    font-size: 36px;
+
+    @include mobile {
+      padding-top: calc(100vh - 100px);
+      font-size: 20px;
+    }
+
+    .progressBar {
+      height: 10px;
+      background-color: white;
+
+      @include mobile {
+        height: 7px;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .wrapper {
+      max-width: 1366px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+
+      @include tablet {
+        width: 95%;
+      }
+      @include mobile {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .imageContainer {
+        width: 50%;
+        flex: 1;
+        height: 50%;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // flex-direction: column;
+        // gap: 8px;
+
+        // background-color: aqua;
+
+        @include mobile {
+          width: 100%;
+          height: 350px;
+          // background-color: aqua;
+        }
+
+        //USING react-image-gallery PACKAGE
+        // .packImgCont {
+        //   width: 100%;
+
+        //   @include mobile {
+        //     width: 100%;
+        //     height: 100%;
+        //     // display: flex;
+        //     // align-items: center;
+        //     // justify-content: center;
+        //     // flex-direction: column;
+        //     background-color: #fafafafa;
+        //   }
+
+        //   .imgGal {
+        //     width: 100%;
+        //     @include mobile {
+        //       // display: flex;
+        //       // align-items: center;
+        //       // justify-content: center;
+        //       // flex-direction: column;
+        //       // gap: 10px;
+        //       width: 95%;
+        //       height: 80%;
+        //       // overflow: hidden;
+        //       background-color: red;
+        //     }
+        //     .orgImg {
+        //       @include mobile {
+        //         width: 100%;
+        //         // height: 15%;
+        //       }
+        //     }
+
+        //     .thumbImg {
+        //       height: 50px;
+        //     }
+        //   }
+        // }
+
+        //USING react-responsive-carousel
+        .carCont {
+          width: 100%;
+          height: 100%;
+          // background-color: red;
+          // display: flex;
+          // align-items: center;
+          // justify-content: center;
+          .car {
+            width: 100%;
+            height: 100%;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
+            .carDiv {
+              width: 100%;
+              height: 100%;
+              // background-color: yellow;
+              // display: flex;
+              // justify-content: start;
+              // align-items: start;
+              // flex-direction: column;
+              .carImg {
+                width: 100%;
+                height: 450px;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+
+        //WITHOUT ANY PACKAGE
+        .primary {
+          padding-top: 85px;
+          width: 100%;
+          height: 100%;
+          .prmImg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+            @include mobile {
+              object-fit: contain;
+            }
+          }
+        }
+
+        .secondary {
+          width: 100%;
+          // overflow: hidden;
+          .scrlcont {
+            // width: 50%;
+            display: flex;
+            overflow-x: scroll;
+            .scndImg {
+              margin-left: 4px;
+              width: 120px;
+              height: 80px;
+              cursor: pointer;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+
+      .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        // background-color: purple;
+
+        @include mobile {
+          transform: none !important;
+          padding: 5px;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          gap: 20px;
+        }
+
+        h2 {
+          font-size: 72px;
+
+          @include mobile {
+            font-size: 36px;
+          }
+        }
+
+        p {
+          color: gray;
+          font-size: 20px;
+
+          @include mobile {
+            font-size: 16px;
+          }
+        }
+
+        span {
+          color: rgba(211, 211, 211, 0.403);
+          font-size: 12px;
+          font-style: italic;
+          font-weight: 600;
+        }
+
+        .btnCont {
+          display: flex;
+          // flex-wrap: wrap;
+          align-items: center;
+          gap: 10px;
+          z-index: 10;
+          a {
+            width: 200px;
+            @include mobile {
+              width: 150px;
+            }
+
+            button {
+              background-color: orange;
+              border: none;
+              border-radius: 10px;
+              padding: 10px;
+              width: 200px;
+              cursor: pointer;
+
+              @include mobile {
+                width: 150px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
